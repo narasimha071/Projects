@@ -1,0 +1,24 @@
+class BankAccount:
+    def __init__(self,AccountName,AccountNum,IFSCcode,balance):
+        self.AccountName=AccountName
+        self.AccountNum=AccountNum
+        self.IFSCcode=IFSCcode
+        self.balance=balance
+    #behaviour method
+        
+    def deposit(self,amount):
+        self.balance +=amount
+    def Withdrawal(self,amount):
+        self.balance -=amount
+    def Totalamount(self):
+        print(self.balance)
+a=BankAccount("Gitam","123456789123","BNdbN1565",10000)
+a.Totalamount()
+
+#adding the amount
+a.deposit(3000)
+a.Totalamount()
+
+#To withdrawal the amount
+a.Withdrawal(1000)
+a.Totalamount()
