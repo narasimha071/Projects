@@ -1,0 +1,33 @@
+#printing the BMI_Report
+
+class BMI_CHECKUP:
+    def __init__(self, weight, Height):
+        self.weight=weight
+        self.Height=Height/100
+
+    def BMI_calculators(self):
+        BMI=(self.weight) / (self.Height**2)
+        return BMI
+    
+    def BMI_conditions(self):
+        BMI=self.BMI_calculators()
+        if BMI==0:
+            return "YOU have entered the wrong data for height and weight"
+        elif BMI<18.5:
+            return "under weight"
+        elif 18.5<=BMI<=25:
+            print ("Normal weight")
+        else:
+            return "over weight"
+
+def user():
+    weight=float(input("enter the weight value: "))
+    Height=float(input("enter the Height value: "))
+
+    a=BMI_CHECKUP(weight,Height)
+    print(f"Your BMI is: {a.BMI_calculators():.2f}")
+    print(f"BMI Classification: {a.BMI_conditions()}")
+    
+if __name__ == "__main__":
+     user()
+
