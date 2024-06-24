@@ -25,7 +25,7 @@ def user():
     Height=float(input("enter the Height value: "))
 
     a=BMI_CHECKUP(weight,Height)
-    print(f"Your BMI is: {a.BMI_calculators():.2f}")
+    print(f"Your BMI is: {a.BMI_calculators():.3f}")
     print(f"BMI Classification: {a.BMI_conditions()}")
     
 if __name__ == "__main__":
