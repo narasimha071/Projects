@@ -15,7 +15,7 @@ class BMI_CHECKUP:
             return "YOU have entered the wrong data for height and weight"
         elif BMI<18.5:
             return "under weight"
-        elif 18.5<=BMI<=25:
+        elif 18.5<=BMI<=28:
             print ("Normal weight")
         else:
             return "over weight"
