@@ -1,0 +1,73 @@
+#Abstraction is where the implementaion  is same but method is differnt.
+from abc import ABC,abstractmethod
+
+class polygon(ABC):
+    @abstractmethod
+    def perimeter(self):
+        pass
+    @abstractmethod
+    def sides(self):
+        pass
+    @abstractmethod
+    def area(self):
+        pass
+    @abstractmethod 
+    def figure(self):
+        pass
+
+#By using in-heritance
+
+class Rectangle(polygon):
+    def object01(self,length,breath):
+        self.length=length
+        self.breath=breath
+        
+    def sides(self):
+        return 4
+
+    def area(self):
+        return self.length*self.breath
+
+    def perimeter(self):
+        return 2*(self.length+self.breath)
+
+    def figure(self):
+        return "It is a 2D dimensional plane"
+
+
+
+class Triangle(polygon):
+    def object(self,a,b,c,base,height):
+        self.a=a
+        self.b=b
+        self.c=c
+        self.base=base
+        self.height=height
+        
+    def sides(self):
+       return 3
+
+    def area(self):
+        return (self.base*self.height)/2
+
+    def perimeter(self):
+        return self.a+self.b+self.c
+
+    def figure(self):
+         return "It is a 2D dimensional plane"
+
+rect=Rectangle()
+rect.object01(19,20)
+print(rect.sides())
+print(rect.area())
+print(rect.perimeter())
+print(rect.figure())
+
+tri=Triangle()
+tri.object(2,3,4,5,6)
+print(tri.sides())
+print(tri.area())
+print(tri.perimeter())
+print(tri.figure())
+
+
