@@ -1,0 +1,50 @@
+#ABSTRACTION
+
+#ABSTACTION is a method were it acts as a blue print.
+#It is a class with different methods
+#ABSTRACATION:A bstraction is method it hides the complexity instructions from the user.
+#Eg: ATM,BANK Credentials and etc
+
+
+    #ABSTRACTION CLASS:
+#Where one or more than abstaction method  is defined in the class is known as abstraction.
+
+    #ABSTRACTION METHOD
+#Where the class is implemented without any instructions/contents is called Abstraction method
+
+
+class Big:
+    def method01(self):
+        pass
+
+#we are getting no error
+#we need to import Extract the abstractclass from ABC Module.
+#Example problem
+
+from abc import ABC,abstractmethod
+class A(ABC):
+    @abstractmethod
+    def method01(self):
+        pass
+    @abstractmethod
+    def method02(self):
+        pass
+    @abstractmethod
+    def method03(self):
+        pass
+
+class B(A):
+    def method01(self):
+        print("Iam from class big and iam a subclass")
+
+    def method02(self):
+        print("Ima a sub class too")
+
+    def method03(self):
+        print("Iam a sub class from class A")
+
+
+obj01=B()
+obj01.method01()
+obj01.method02()
+obj01.method03()
